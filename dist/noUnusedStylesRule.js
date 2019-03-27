@@ -80,8 +80,8 @@ var NoUnusedStylesWalker = /** @class */ (function(_super) {
       stylesheet.forEach(function(child) {
         if (
           ts.isPropertyAssignment(child) &&
-          (!this.usedProperties[variableName] ||
-            !this.usedProperties[variableName].includes(child.name.getText()))
+          (!_this.usedProperties[variableName] ||
+            !_this.usedProperties[variableName].includes(child.name.getText()))
         ) {
           _this.addFailure(
             _this.createFailure(child.getStart(), child.getWidth(), Rule.FAILURE_STRING),
